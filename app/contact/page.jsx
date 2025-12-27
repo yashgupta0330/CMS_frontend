@@ -25,7 +25,7 @@ function ContactForm() {
     setError('');
     setSuccess('');
     try {
-      await axios.post('http://localhost:1337/api/contacts', {
+      await axios.post('https://smart-nest-0c47dbfbb7.strapiapp.com/api/contacts', {
         data: form
       });
       setSuccess('Contact submitted successfully!');

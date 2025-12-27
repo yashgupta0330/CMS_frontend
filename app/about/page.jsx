@@ -7,7 +7,7 @@ function Page() {
   const [loading, setLoading] = useState(true);
   
   useEffect(() => {
-    axios.get('http://localhost:1337/api/about')
+    axios.get('https://smart-nest-0c47dbfbb7.strapiapp.com/api/about')
       .then(res => {
          console.log('check', res.data.data)
         setAbout(res.data.data || {});

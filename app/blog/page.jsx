@@ -7,7 +7,7 @@ function BlogPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:1337/api/blogs?populate=imagePost')
+    axios.get('https://smart-nest-0c47dbfbb7.strapiapp.com/api/blogs?populate=imagePost')
       .then(res => {
         // console.log('check', res.data.data);
         setBlogs(res.data.data || []);
@@ -28,7 +28,7 @@ function BlogPage() {
             {blogs.map(blog => {
               const { title, description, imagePost ,category1 } = blog
               const imageUrl = imagePost?.url
-                ? `http://localhost:1337${imagePost.url}`
+                ? `https://smart-nest-0c47dbfbb7.strapiapp.com${imagePost.url}`
                 : 'https://via.placeholder.com/400x250?text=No+Image';
               return (
                 <div key={blog.id} className="bg-white rounded-xl shadow-md overflow-hidden">
